@@ -1,0 +1,9 @@
+#!/bin/bash
+
+OUTPUT_FILE=yabsatlog_$(date +%Y-%m-%a_%H_%M_%S).txt
+touch ./$OUTPUT_FILE
+
+for linux_file in $(find $1)
+do
+	stat --format="%n %s %b %f %u %g %D %i %h %t %T %Y %W %o" $linux_file >> ./$OUTPUT_FILE
+done
