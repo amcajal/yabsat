@@ -12,14 +12,24 @@ What is needed?
 With those three core utilities that are present in most of the GNU/Linux distros, a fairly depth analysis of a system can be carried out, without configuring complex dot files, neither launching daemons nor messing with admin inner guts. KISS principle at is finest.
 
 Steps to use AIDE-ize a directory with the script:
+
 1- Launch yabsat script to obtain the known state or "base snapshot"
+```
   $> bash yabsat.bash ./interesting_dir
   $> mv yabsatlog* base_snapshot.txt
+```
+
 2- Play as usual with the system
+
 3- Launch yabsat script to obtain a report of the modified state
+```
   $> bash yabsat.bash ./interesting_dir
+```
+  
 4- Diff the base snapshot with the last report. Enjoy the inquiry
+```
   $> diff base_* yabsatlog*
+```
   
 Of course, this script is not as complete and powerful as HIDS tools. But sometimes (many times) you dont need that power. The previous steps allows you to detect creation, deletion and modification of the most typical linux file types. And by modification, it shall be understood the change in content as well as change in status (i.e chmod or chown).
 
