@@ -41,6 +41,16 @@ $> python yabsatdiff.py base_* new_*
 # Now, read the results file "yabsatdiff_results.txt"
 ```
 
+Need even more? Combine the yabsat.bsh script with the python script with "check_these_dir.bsh" script, which analyzes a list of custom directories (of course, this last script must be modified by the user to meet its needs)
+```
+# Obtain the base snapshot of all the directories to be analyzed
+$> bash check_these_dirs.bsh && mv all_logs.txt base_logs.txt
+# Now, mess around with the system as always, and get the new state
+$> bash check_these_dirs.bsh && mv all_logs.txt new_logs.txt
+# And compare
+$> python yabsatdiff.py base_* new_*
+```
+
 This script may not be fit to be used as a real AIDE tool, but it can be helpfull when dealing with complex applications that, uppon execution:
 - modifies lot of files, without telling you what files are
 - creates logs, without telling you where they are created
