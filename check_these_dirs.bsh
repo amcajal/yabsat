@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# List of directories to be analyzed
+list_of_dirs='
+	/home/pi/python_games/
+	/home/pi/Downloads/
+'
+
+for dir in $list_of_dirs
+do
+	bash yabsat.bsh $dir
+	
+	cat yabsatlog* >> all_logs.txt
+	echo -e "\n\n" >> all_logs.txt
+	rm yabsatlog*
+done
+
