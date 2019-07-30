@@ -16,7 +16,7 @@ Steps to AIDE-ize a directory with the script:
 
 1- Launch yabsat script to obtain the known state or "base snapshot"
 ```
-  $> bash yabsat.bash ./interesting_dir
+  $> bash yabsat.bsh ./interesting_dir
   $> mv yabsatlog* base_snapshot.txt
 ```
 
@@ -24,7 +24,7 @@ Steps to AIDE-ize a directory with the script:
 
 3- Launch yabsat script to obtain a report of the modified state
 ```
-  $> bash yabsat.bash ./interesting_dir
+  $> bash yabsat.bsh ./interesting_dir
   $> mv yabsatlog* new_state.txt
 ```
   
