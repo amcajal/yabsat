@@ -7,7 +7,7 @@ In this case, the output is a bash script that allow to perform AIDE operations 
 
 What is needed?
 - "find" utility
-- "state" utility
+- "stat" utility
 - "diff" utility
 
 With those three core utilities that are present in most of the GNU/Linux distros, a fairly depth analysis of a system can be carried out, without configuring complex dot files, neither launching daemons nor messing with admin inner guts. KISS principle at is finest.
